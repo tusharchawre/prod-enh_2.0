@@ -21,11 +21,16 @@ interface CardWrapperProps {
 export const CardWrapper = ({children,headerLabel,backButtonHref,backButtonLabel,showSocials}: CardWrapperProps)=>{
     return(
         <>
+
+
+
               <div className="blur"></div>
         <div className="tealblob2"></div>
       <div className="purblob2"></div>
         <Card className="login glassblur bg-card-foreground-none">
+
             <CardContent>
+        <h1>Login</h1>
 
             {children}
             </CardContent>

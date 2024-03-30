@@ -1,3 +1,6 @@
+@import url(https://db.onlinewebfonts.com/c/2ade689621e1220b228ad4caae3db308?family=ReloadAlt-Light);
+
+
 .login{
     width: 50%;
     height: 65%;
@@ -14,7 +17,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
+
     position: relative;
     z-index: 10000;
     flex-direction: column;
@@ -28,38 +31,23 @@ label {
     width: 60%;
     text-align: left;
     display: block;
-    margin-bottom: 5px;
-    color: #fff;
+  
+
   }
 
 
-input{
-    width: 60%;
-    padding: 1vw;
-    margin: 1vw;
-    border: none;
-    border-radius: 5px;
-    background: rgba(255, 255, 255, 0.1);
-    color: #fff;
-}
 
-button {
-    width: 20%;
-    padding: 12px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
+
 
   button:hover {
     background-color: #0056b3;
   }
   
 
-  h1{
+  .login h1{
     font-family: "ReloadAlt-Light";
+    font-size: 2vw;
+    padding-bottom: 2vw;
+    text-align: center;
 
   }
