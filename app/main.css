@@ -1,0 +1,778 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=Edu+NSW+ACT+Foundation:wght@400..700&family=Pacifico&family=Permanent+Marker&family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url(https://db.onlinewebfonts.com/c/2ade689621e1220b228ad4caae3db308?family=ReloadAlt-Light);
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+@font-face {
+    font-family: Nightmare;
+    src: url(/assets/nemo-nightmares.regular.ttf);
+}
+@font-face {
+    font-family: BacktoBlack;
+    src: url(/assets/BacktoBlackDemo.ttf);
+}
+@font-face {
+    font-family: OldEnglish;
+    src: url(/assets/traditio-ah.regular.ttf);
+}
+@font-face {
+    font-family: chancery;
+    src: url(/assets/BLKCHCRY.ttf);
+}
+
+
+
+html , body{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    scroll-snap-type: y mandatory;
+
+
+}
+
+
+.main{
+    scroll-snap-align: center;
+
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.glass{
+    position: relative;
+    width: 80%;
+    height: 80%;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0.5vw 0.5vw 1vw rgba(48, 48, 48, 0.169);
+}
+
+.herowrap{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.tealblob{
+    position: absolute;
+    height:400px;
+    width: 400px;
+    border-radius: 50%;
+    left: 300px;
+    top: 50px;
+    z-index: 2;
+    background-color: #2BBFED;
+    animation: tealanime 10s cubic-bezier(0.455, 0.03, 0.515, 0.955)  infinite alternate-reverse ;
+}
+
+@keyframes tealanime {
+    from{
+        transform: translate(0%,0%) skew(30deg,0deg) rotate(360deg);
+            transform-origin: top left;
+    }
+    to{
+        transform: translate(0%,0%)  ;
+    }  
+}
+
+.greenblob{
+    position: absolute;
+    height:400px;
+    width: 400px;
+    border-radius: 50%;
+    left: 10px;
+    bottom: -40px;
+    z-index: 2;
+    background-color: #8CED2B;
+    opacity: 0.8;
+    animation: greenanime 10s cubic-bezier(0.455, 0.03, 0.515, 0.955) 2s infinite alternate-reverse ;
+}
+
+@keyframes greenanime {
+    from{
+        transform: translate(0%,0%) skew(30deg,0deg) rotate(360deg);
+            transform-origin: bottom left;
+    }
+    to{
+        transform: translate(0%,0%)  ;
+    }   
+}
+
+.pinkblob{
+    position: absolute;
+    height:500px;
+    width: 500px;
+    border-radius: 50%;
+    right: -50px;
+    bottom: -70px;
+    z-index: 1;
+    animation: pinkanime 15s cubic-bezier(0.455, 0.03, 0.515, 0.955)   infinite alternate-reverse ;
+    animation-delay: 3s;
+    background-color: #C04242;
+}
+
+@keyframes pinkanime {
+    from{
+        transform: translate(-10%,0%) skew(30deg) rotate(360deg);
+            transform-origin: bottom right;
+    }
+    to{
+        transform: translate(0%,0%)  ;
+    } 
+}
+
+.glassblur{
+    background: white;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background:  rgba(255,255,255,0.1) ;
+    background: linear-gradient(to top right,  rgba(255,255,255,0.1) ,  rgba(255,255,255,0.03));
+    border: 0.5px solid  rgba(255,255,255,0.17);
+    border-right: 0.5px solid  rgba(255,255,255,0.05);
+    border-bottom: 0.5px solid  rgba(255,255,255,0.05);
+    border-radius: 20px;
+    z-index: 99;
+    overflow: hidden;
+    backdrop-filter: blur(130px) ;
+}
+
+.noise{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    opacity: 0.05;
+    background: url(https://grainy-gradients.vercel.app/noise.svg);
+}
+.hero{  
+    padding: 7.5vw;
+ 
+    position: relative;
+    font-size: 3vw;
+    z-index: 999;
+}
+
+.hero h1{
+    font-family: "Inter", sans-serif;
+    text-align: justify;
+    font-size: 4.2vmax;
+    font-weight: 400;
+
+}
+
+
+
+
+
+.barrier{
+position: relative;
+
+/* text-decoration: line-through;
+text-decoration-thickness: 4.5vw; */
+}
+
+
+.inner {
+    position: relative; 
+    display: inline-block;
+  }
+.inner::before {
+    content: ''; 
+    position: absolute; 
+    top:0.6vmax; 
+    left: 0; 
+    width: 0%;
+    height: 4.5vmax; 
+    background-color: rgb(255, 255, 255); 
+    z-index: 1; 
+    animation: applyStrikethrough 3s cubic-bezier(0.77, 0, 0.175, 1) 6s forwards; 
+  }
+
+  /* Keyframes for the animation */
+@keyframes applyStrikethrough {
+    from { width: 0%; } 
+    to { width: 100%; } 
+  }
+
+  
+
+@keyframes changeFonts {
+    0% { font-family: "Caveat", cursive; }
+    25% { font-family: "Shadows Into Light", cursive; }
+    50% { font-family: "Pacifico", cursive; }
+    75% { font-family: BacktoBlack }
+    100% { font-family: "Caveat", cursive;  }
+  }
+
+
+    
+
+.seed{
+    font-family: BacktoBlack;
+    font-size: 4vmax;
+}
+
+.your{
+font-family: "Edu NSW ACT Foundation", cursive; 
+font-size: 4.5vmax;
+    
+}
+
+
+.idea{
+    font-family: OldEnglish;
+    font-size: 4.5vmax;
+}
+
+
+
+
+.gradient{
+    position: absolute;
+    width: 100%;
+    bottom: -30vh;
+    height: 60vh;
+   
+    background: linear-gradient(to bottom, transparent, black,transparent);
+    z-index: 9;
+
+
+}
+
+.gradwrap{
+    position: relative;
+    height:120vh;
+    width:100vw;
+
+}
+
+
+
+/* Main 2 The page part 2 */
+
+.main2{
+    scroll-snap-align: center;
+
+    position: relative;
+    height: fit-content;
+    width: 100%;
+    padding: 10vw 6vw;
+
+
+    z-index: 8;
+    background-color: black;
+    display: grid;
+    gap: 3vw;
+    grid-template-columns: 20vw 20vw 20vw 20vw;
+    grid-template-rows:20vw 20vw ;
+
+
+
+
+
+}
+
+.main2blur {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+   backdrop-filter: blur(80px);
+    z-index: 4;
+
+
+}
+
+
+#glass{
+    position: relative;
+    background-image: radial-gradient(  rgba(255,255,255,0.01) ,  rgba(255,255,255,0.04));
+    border: 0.5px solid  rgba(255,255,255,0.17);
+    border-right: 0.5px solid  rgba(255,255,255,0.05);
+    border-bottom: 0.5px solid  rgba(255,255,255,0.05);
+    box-shadow: 0.5vw 0.5vw 1vw rgba(0, 0, 0, 0.207);
+    border-radius: 2vw;
+    backdrop-filter: blur(130px) ;
+    overflow: hidden;
+    z-index: 99;
+
+}
+
+
+.ver-glass{
+
+
+    grid-row: 1 / 3;
+    grid-column: 1 / 2;
+
+
+
+
+}
+.graph-glass{
+
+grid-column: 2 / 3;
+grid-row: 1/ 2;
+
+
+
+
+}
+
+.goodnotes{
+
+    width: 100%;
+
+}
+
+.graphs{
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
+.shit-glass{
+    grid-row: 1 / 2;
+    grid-column: 3 / 5;
+    display: flex;
+    align-items: center;
+
+
+   
+}
+
+.clock-main{
+
+    grid-row: 2 / 3;
+    grid-column: 4/5;
+}
+
+.vividImage{
+    grid-row: 2/3;
+    grid-column: 2/4;
+    opacity: 0.9;
+}
+
+
+@keyframes luplup {
+    100%{
+        opacity: 0.1;
+        transform: translate(-10%,-10%);
+        rotate: 0deg;
+    }
+    50%{
+        opacity: 0.2;
+        transform: translate(0%,0%);
+        rotate: 180deg;
+        
+
+    }
+    0%{
+        opacity: 0.1;
+        transform: translate(-10%,-10%);
+        rotate: 360deg;
+    }
+}
+
+
+@keyframes luplup2 {
+    100%{
+        opacity: 0.5;
+      
+    }
+    50%{
+        opacity: 1;
+      
+
+    }
+    0%{
+        opacity: 0.5;
+        
+    }
+}
+
+
+
+.purblob2{
+    position: absolute;
+    height:400px;
+    width: 400px;
+    border-radius: 50%;
+    right: 200px;
+    top: 400px;
+
+
+    z-index: 2;
+    background-color: #4c4cff;
+    opacity: 0.2;
+
+    animation: luplup 4s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+}
+
+.tealblob2{
+    position: absolute;
+    height:400px;
+    width: 400px;
+    border-radius: 50%;
+    left: 200px;
+    top: 150px;
+
+
+    z-index: 2;
+    background-color: #2BBFED;
+    opacity: 0.2;
+
+    animation: luplup 7s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+
+}
+
+.circle{
+    position: relative;
+    width: 8vw;
+    height: 8vw;
+    width: 50%;
+    transform: translateX(35%);
+
+    scale: 1.3;
+  }
+  
+  .circle svg {
+    overflow: visible;
+
+    width: 8vw;
+    height: 8vw;
+    scale: 1.3;
+  }
+  
+  .circle .bg {
+    fill: none;
+    stroke-width: 0.6vmax;
+    stroke: #1b2a33;
+  }
+  
+  .circle .progress {
+    position: absolute;
+    fill: none;
+    stroke-width: 0.6vmax;
+    stroke: #81ecec;
+    stroke-linecap: round;
+    stroke-dasharray: 360;
+    stroke-dashoffset: 90;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    animation: big 1.5s ease-out;
+  }
+
+
+  .percentage{
+    
+    font-family: "ReloadAlt-Light";
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    font-size: 4vw;
+    transform: translate(-35%,-50%);
+}
+
+
+.clock {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.046);
+    border-radius: 50%;
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, .05);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.095);
+    scale: 0.9;
+
+}
+
+
+
+.clock .clock-bg img {
+    width: 100%;
+    height: 100%;
+}
+
+.clock::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 15;
+}
+
+.clock .hour,
+.clock .minute,
+.clock .second {
+    position: absolute;
+}
+
+.clock .hour,
+.clock .hour .hr {
+    width: 160px;
+    height: 160px;
+}
+
+.clock .minute,
+.clock .minute .min {
+    width: 190px;
+    height: 190px;
+}
+
+.clock .second,
+.clock .second .sec {
+    width: 230px;
+    height: 230px;
+}
+
+.clock .hour .hr,
+.clock .minute .min,
+.clock .second .sec {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.clock .hour .hr::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 80px;
+    background: #ff00ae;
+    z-index: 10;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px #ff00ae98;
+
+}
+
+.clock .minute .min::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 90px;
+    background: #39a2db;
+    z-index: 11;
+    border-radius: 8px;
+    box-shadow: 0 0 10px 5px #39a2dba6;
+}
+
+.clock .second .sec::before {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 140px;
+    background: #fff;
+    z-index: 12;
+    border-radius: 2px;
+    box-shadow: 0 0 10px 5px #ffffff69;
+
+}
+
+.sht2{
+    z-index: 1;
+    filter: blur(20px);
+    position: absolute;
+    left: 0;
+    top: 0;
+    grid-row: 2/3;
+    grid-column: 2/4;
+    animation: luplup2 8s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+
+
+
+}
+
+
+.ver-glass{
+    font-family: "ReloadAlt-Light";
+    position: relative;
+    
+}
+
+.ver-glass h1{
+    padding: 1vw 2vw;
+    font-size: 2vw;
+}
+
+.ver-glass h2{
+    padding: 0.5vw 2vw;
+    font-size: 1.5vw;
+}
+
+.ver-glass h3{
+    padding: 0vw 3vw;
+    font-size: 1.05vw;
+}
+
+.keepit{
+    padding: 0vw 1.2vw;
+}
+
+.sht3{
+    z-index: 1;
+    filter: blur(20px);
+    position: absolute;
+    left: 0;
+    top: 0;
+    grid-row: 1 / 3;
+    grid-column: 1 / 2;
+    animation: luplup2 14s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+    opacity: 0.5;
+
+
+
+}
+
+
+.buttoncon{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    font-size: 0.7vw;
+    z-index: 1000;
+}
+
+.buttoncon button{
+    border: none;
+    width: 9vw;
+    height: 5vh;
+    background-color: #2BBFED;
+    border-radius: 10px;
+    font-family: "ReloadAlt-Light";
+    font-size: 1.2vw;
+    margin: 0.5vw;
+    margin-top: 0.3vw;
+    cursor: pointer;
+
+}
+
+
+
+/* Main 3 */
+
+.main3{
+    scroll-snap-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    z-index: 5;
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    overflow: hidden;
+
+}
+
+canvas{
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+
+}
+
+#herovideo{
+    position: absolute;
+
+
+    width: 100%;
+    height: 100%;
+
+}
+
+.hero3{
+    position: absolute;
+    z-index: 145;
+    font-family: "ReloadAlt-Light";
+    font-size: 4vw;
+    pointer-events: none;
+    word-spacing: 1vw;
+
+   
+}
+
+.switch{
+    animation: changeFonts 0.8s linear  infinite  ;;
+}
+
+
+.text{
+    width: 50%;
+    font-family: "ReloadAlt-Light";
+    position: relative;
+
+}
+
+.text h1{
+
+    font-size: 1.5vw;
+}
+
+.text h2{
+
+    font-size: 0.7vw;
+}
+
+
+/* footer */
+
+.footer{   
+     scroll-snap-align: end;
+
+    position: relative;
+    width: 100%;
+    height: 5vmin;
+    background-color: rgb(13, 13, 13);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items:end;
+    padding: 1vw;
+
+}
+
+
+.container {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+
+  
+    
+}

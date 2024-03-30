@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+a{
+    text-decoration: none;
+}
+
+.main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.blur{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(150px);
+    z-index: 3;
+}
+
+.pane{
+    position: relative;
+    z-index: 99;
+    width: 80%;
+    height: 80%;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0.5vw 0.5vw 1vw rgba(48, 48, 48, 0.169);
+}
+
+.noise{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    opacity: 0.01;
+    background: url(https://grainy-gradients.vercel.app/noise.svg);
+}
+
+.glassblur{
+    position: relative;
+    background-image: radial-gradient(  rgba(255,255,255,0.01) ,  rgba(255,255,255,0.04));
+    border: 0.5px solid  rgba(255,255,255,0.17);
+    border-right: 0.5px solid  rgba(255,255,255,0.05);
+    border-bottom: 0.5px solid  rgba(255,255,255,0.05);
+    box-shadow: 0.5vw 0.5vw 1vw rgba(0, 0, 0, 0.207);
+    border-radius: 2vw;
+    backdrop-filter: blur(130px) ;
+    overflow: hidden;
+    z-index: 99;
+
+
+}
+
+
+
+.sidepane{
+
+    position: absolute;
+height: 100%;
+width: 25%;
+border: 1px white;
+display: flex;
+flex-direction: column;
+align-items: center;
+z-index: 5;
+}
+
+
+
+
+
+.notes{
+    width: 90%;
+    height: 13%;
+    border-radius: 2px;
+    opacity: 0.6;
+    display: flex;
+    padding: 2vw 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.179) ;
+
+
+}
+
+.notes p{
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2vw;
+    opacity: 0.4;
+    padding: 0 1vw;
+}
+.notes h1{
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2vw;
+    padding: 0 1vw;
+
+}
+
+.profile{
+    width: 70%;
+    height: 8%;
+    border-radius: 1vw;
+    opacity: 0.6;
+
+}
+
+.toolbar{
+    position: absolute;
+    width: 100%;
+    height: 8%;
+    background-color: rgba(0, 0, 0, 0.325);
+    z-index: 1;
+
+}
+
+
+@keyframes luplup {
+    100%{
+        opacity: 0.1;
+        transform: translate(-10%,-10%);
+        rotate: 0deg;
+    }
+    50%{
+        opacity: 0.2;
+        transform: translate(0%,0%);
+        rotate: 180deg;
+        
+
+    }
+    0%{
+        opacity: 0.1;
+        transform: translate(-10%,-10%);
+        rotate: 360deg;
+    }
+}
+
+
+
+
+
+.purblob2{
+    position: absolute;
+    height:400px;
+    width: 400px;
+    border-radius: 50%;
+    right: 200px;
+    top: 200px;
+
+
+    z-index: 1;
+    background-color: #4c4cff;
+    opacity: 0.2;
+
+    animation: luplup 4s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+}
+
+.tealblob2{
+    position: absolute;
+    height:400px;
+    width: 400px;
+    border-radius: 50%;
+    left: 200px;
+    top: 80px;
+
+
+    z-index: 1;
+    background-color: #2BBFED;
+    opacity: 0.2;
+
+    animation: luplup 7s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+
+}
