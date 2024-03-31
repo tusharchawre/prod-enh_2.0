@@ -30,7 +30,7 @@ export const CardWrapper = ({children,headerLabel,backButtonHref,backButtonLabel
         <Card className="login glassblur bg-card-foreground-none">
 
             <CardContent>
-        <h1>Login</h1>
+        
 
             {children}
             </CardContent>

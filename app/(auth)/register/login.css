@@ -14,7 +14,6 @@
 
 
 .login{
-  height: 70vh;
 
     display: flex;
     align-items: center;
@@ -48,15 +47,8 @@ label {
 
   .login h1{
     font-family: "ReloadAlt-Light";
-    font-size: 2vmax;
+    font-size: 2vw;
     padding-bottom: 2vw;
-    text-align: center;
-
-  }
-
-  .login p{
-    font-family: "ReloadAlt-Light";
-    font-size: 1vmax;
     text-align: center;
 
   }
