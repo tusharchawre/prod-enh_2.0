@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 
 
 import { CoverImageModal } from "@/components/modals/cover-image-modal";
+import { ToDoModal } from "@/components/modals/list-content-modal";
+
 
 export const ModalProvider = () => {
   const [isMounted, setIsMounted] = useState(false);
@@ -18,8 +20,8 @@ export const ModalProvider = () => {
   
   return (
     <>
-
       <CoverImageModal />
+      <ToDoModal />
     </>
   );
 };
