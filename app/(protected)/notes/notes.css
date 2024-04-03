@@ -5,7 +5,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: white;
 }
 html , body{
     height: 100%;
@@ -23,7 +22,8 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    color: white;
+
 }
 
 .blur{
@@ -50,7 +50,7 @@ a{
     position: absolute;
     top: 0;
     z-index: 100;
-    opacity: 0.01;
+    opacity: 0.02;
     background: url(https://grainy-gradients.vercel.app/noise.svg);
 }
 

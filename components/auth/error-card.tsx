@@ -1,6 +1,6 @@
 import { BackButton } from "./back-button";
 import "@/app/(auth)/login/login.css"
-import "@/app/notes/notes.css"
+import "@/app/(protected)/notes/notes.css"
 
 import { Card,
     CardHeader,

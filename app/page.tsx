@@ -10,6 +10,7 @@ import { LoginButton } from '@/components/auth/login-button'
 
 
 const page = () => {
+
  
 
 
@@ -27,6 +28,7 @@ const page = () => {
 
       <div className="hero">
         <h1> <span className="barrier">
+         
           <div className="inner">The</div> </span><span className='seed'>Seed</span> <span className="barrier"> 
           <div className="inner">of your thoughts when</div><div className="inner">planted at right time</div><br /></span><span className='barrier'><div className="inner"> can shape</div></span><span className="your"> Your </span><span className="barrier"><div className="inner">reality. A vision </div></span><span className='barrier'><div className="inner">that bloomed into great</div></span> <span className='idea'> Idea</span>.</h1>
       </div>
