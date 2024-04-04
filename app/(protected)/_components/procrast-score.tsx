@@ -45,6 +45,9 @@ export const ProcrastinationScore = () =>{
       setNumber2(lists2.length); // Update number based on the length of documents array
     }
   }, [lists2]);
+  if (number || number2 == 0){
+    setPercentage(0)
+  }
 
   const ratio = (number/number2)
 
@@ -58,9 +61,6 @@ export const ProcrastinationScore = () =>{
 
   
 
-    if (number || number2 == 0){
-      setPercentage(0)
-    }
 
 
 
