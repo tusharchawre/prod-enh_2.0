@@ -18,7 +18,7 @@ import { TrashBox } from "./trash-box";
 import { useSearch } from "@/hooks/use-search";
 import { Navbar } from "./navbar";
 import { Skeleton } from "@/components/ui/skeleton";
-import { document } from "postcss";
+
 
  export const Navigation =()=>{
   const router = useRouter()
@@ -65,8 +65,8 @@ import { document } from "postcss";
         event.stopPropagation();
     
         isResizingRef.current = true;
-        (document as any).addEventListener("mousemove", handleMouseMove);
-        (document as any).addEventListener("mouseup", handleMouseUp);
+document.addEventListener("mousemove", handleMouseMove);
+document.addEventListener("mouseup", handleMouseUp);
       };
     
       const handleMouseMove = (event: MouseEvent) => {
@@ -94,8 +94,8 @@ import { document } from "postcss";
     
       const handleMouseUp = () => {
         isResizingRef.current = false;
-        (document as any).removeEventListener("mousemove", handleMouseMove);
-        (document as any).removeEventListener("mouseup", handleMouseUp);
+document.removeEventListener("mousemove", handleMouseMove);
+document.removeEventListener("mouseup", handleMouseUp);
       };
 
       const resetWidth = () =>{
