@@ -65,8 +65,8 @@ import { document } from "postcss";
         event.stopPropagation();
     
         isResizingRef.current = true;
-        document.addEventListener("mousemove", handleMouseMove);
-        document.addEventListener("mouseup", handleMouseUp);
+        (document as any).addEventListener("mousemove", handleMouseMove);
+        (document as any).addEventListener("mouseup", handleMouseUp);
       };
     
       const handleMouseMove = (event: MouseEvent) => {
@@ -94,8 +94,8 @@ import { document } from "postcss";
     
       const handleMouseUp = () => {
         isResizingRef.current = false;
-        document.removeEventListener("mousemove", handleMouseMove);
-        document.removeEventListener("mouseup", handleMouseUp);
+        (document as any).removeEventListener("mousemove", handleMouseMove);
+        (document as any).removeEventListener("mouseup", handleMouseUp);
       };
 
       const resetWidth = () =>{

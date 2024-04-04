@@ -9,7 +9,7 @@ import { api } from "@/convex/_generated/api";
 import { useCurrentUser } from "@/hooks/use-current-user";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
-import { Check, CircleCheck, Image, Trash } from "lucide-react";
+import { Check, CircleCheck,  ImageIcon, Trash } from "lucide-react";
 import { useState } from "react";
 import { ToDoModal } from "@/components/modals/to-do-modal";
 
@@ -237,7 +237,7 @@ export const ListItem = ({id,active,label,onClick, content, isfinished}:ListItem
           {contentItem.type === 'image' && (
             <div className="px-3">
               {/* Render image as icon */}
-              <Image />
+              <ImageIcon />
             </div>
           )}
           {/* Render plain text for other types */}

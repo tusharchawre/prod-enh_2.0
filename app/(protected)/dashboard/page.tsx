@@ -8,7 +8,7 @@ import { CalendarPage } from "../_components/calender"
 
 
 
-export const Dashboard = () =>{
+ const Dashboard = () =>{
   
 
 
@@ -41,4 +41,4 @@ export const Dashboard = () =>{
 }
 
 
-export default Dashboard
+export default Dashboard;

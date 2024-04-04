@@ -49,6 +49,8 @@ export const Item = ({
     expanded,
 }:ItemProps) => {
 
+  const user = useCurrentUser()
+
 
     const archive = useMutation(api.documents.archive)
 
@@ -126,7 +128,7 @@ export const Item = ({
                     </DropdownMenuItem>
                     <DropdownMenuSeparator className="opacity-35"/>
                     <div className="text-xs text-muted-foreground p-2">
-                        Last edited by: {useCurrentUser()?.name}
+                        Last edited by: {user?.name}
                     </div>
 
                  </DropdownMenuContent>
