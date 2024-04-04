@@ -198,7 +198,7 @@ export const getUnfinished = query({
           .eq("userId", args.userId)
       )
       .filter((q) =>
-        q.eq(q.field("finished"), false)
+        q.eq(q.field("finished"), true)
       )
       .order("desc")
       .collect();
