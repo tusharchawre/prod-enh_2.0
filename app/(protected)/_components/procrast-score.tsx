@@ -52,7 +52,7 @@ export const ProcrastinationScore = () =>{
 
 
   useEffect(() => {
-  const ratio = (number/number2)
+  const ratio = ((number2-number)/number2)
     if (ratio !== undefined) {
       setPercentage(ratio*100); 
       
