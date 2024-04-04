@@ -95,6 +95,7 @@ export const update = mutation({
     id: v.id("lists"),
     title: v.optional(v.string()),
     content: v.optional(v.string()),
+    deadline: v.optional(v.string())
 
 
 
@@ -181,3 +182,27 @@ export const notDone = mutation({
     return document;
   }
 })
+
+
+export const getUnfinished = query({
+  args: {
+    userId: v.string(),
+  },
+  handler: async (ctx, args) => {
+  
+
+    const documents = await ctx.db
+      .query("lists")
+      .withIndex("by_user", (q) =>
+        q
+          .eq("userId", args.userId)
+      )
+      .filter((q) =>
+        q.eq(q.field("finished"), false)
+      )
+      .order("desc")
+      .collect();
+
+    return documents;
+  },
+});

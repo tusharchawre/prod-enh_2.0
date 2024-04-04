@@ -172,10 +172,17 @@ const page = () => {
       </div>
     </div>
 
-    <div className="footer">
+    <div className="relative footer">
 
-    <div className="container">
-        <p>&copy; 2024 Our Website. Mini Project 1-B.</p>
+    <div className="flex w-full items-center h-16 justify-center">
+    <div className="buttoncon">
+      <p>Explore.</p>
+
+        <LoginButton>
+  <button>Login</button>
+
+</LoginButton>
+</div>
     </div>
     </div>
 

@@ -219,7 +219,7 @@ z-index: 5;
     stroke: #81ecec;
     stroke-linecap: round;
     stroke-dasharray: 360;
-    stroke-dashoffset: 350;
+
     transform: rotate(-90deg);
     transform-origin: 50% 50%;
     animation: big 1.5s ease-out;
@@ -229,9 +229,13 @@ z-index: 5;
   .percentage{
     
     font-family: "ReloadAlt-Light";
-    position: absolute;
-    top: 50%;
-    left: 25%;
+
     font-size: 4vw;
-    transform: translate(-35%,-50%);
+
+}
+
+
+.text{
+    font-family: "ReloadAlt-Light";
+
 }

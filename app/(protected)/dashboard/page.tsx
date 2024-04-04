@@ -5,6 +5,7 @@ import { NotesCount } from "../_components/notes-count"
 import { useRouter } from "next/navigation"
 import { ProcrastinationScore } from "../_components/procrast-score"
 import { CalendarPage } from "../_components/calender"
+import { ToDoCount } from "../_components/list-count"
 
 
 
@@ -29,8 +30,9 @@ import { CalendarPage } from "../_components/calender"
 
         <NotesCount  />
         <ProcrastinationScore />
+        <ToDoCount />
         <CalendarPage />
-        <ProcrastinationScore />
+
 </div>
 
 

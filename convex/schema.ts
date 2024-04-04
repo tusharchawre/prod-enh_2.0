@@ -20,8 +20,6 @@ export default defineSchema({
     content: v.optional(v.string()),
     deadline: v.optional(v.string()),
     finished: v.boolean()
-
-
   })
   .index("by_user", ["userId"]),
 

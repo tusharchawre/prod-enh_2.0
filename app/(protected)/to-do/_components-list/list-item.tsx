@@ -12,6 +12,7 @@ import { Button } from "@/components/ui/button";
 import { Check, CircleCheck,  ImageIcon, Trash } from "lucide-react";
 import { useState } from "react";
 import { ToDoModal } from "@/components/modals/to-do-modal";
+import { Skeleton } from "@/components/ui/skeleton";
 
 
 
@@ -282,4 +283,20 @@ export const ListItem = ({id,active,label,onClick, content, isfinished}:ListItem
     )
         
      
+}
+
+
+
+ListItem.Skeleton = function ListSkeleton({ level }: { level?: number }) {
+  return (
+    <div
+      style={{
+        paddingLeft: level ? `${(level * 12) + 25}px` : "12px"
+      }}
+
+    >
+
+      <Skeleton className="h-64 w-64 bg-white/40" />
+    </div>
+  )
 }

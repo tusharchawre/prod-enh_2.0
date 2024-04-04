@@ -13,6 +13,7 @@ import { useCurrentUser } from "@/hooks/use-current-user";
 import { useMutation, useQuery } from "convex/react";
 import { useParams } from "next/navigation";
 import Editor from "../editor";
+import { DatePickerDemo } from "../date-picker";
 
 
 
@@ -38,8 +39,30 @@ export const ToDoModal = ({children , initialData} : ToDoModalProps) =>{
         content
       });
     };
+
+
     
- 
+    const isDeadlineOverdue = () => {
+        if (!initialData.deadline) {
+            return null; // If deadline is undefined, it's not overdue
+        }
+        
+        const currentDateTime = Date.now();
+        const deadlineDateTime = new Date(JSON.parse(initialData.deadline)).getTime() // Convert string to Date object
+        return currentDateTime > deadlineDateTime;
+
+
+    };
+
+
+
+
+
+
+
+
+
+
 
 
     return(
@@ -49,21 +72,29 @@ export const ToDoModal = ({children , initialData} : ToDoModalProps) =>{
             {children}
             </DialogTrigger>
             
-            <DialogContent className="flex flex-col h-96 items-center ">
+            <DialogContent className="flex flex-col text-black h-96 items-center ">
 
 
                 <TitleList initialData={initialData}  />
+                    <DatePickerDemo initialData={initialData}   />
 
-                <div className="w-full h-full rounded-md bg-[#1F1F1F]">
+                   
+
+                <div className="w-full h-full rounded-md bg-[#1F1F1F] overflow-auto">
 
             <Editor
             
             
             onChange={onChange}
-          initialContent={initialData.content}
-
-        />
+            initialContent={initialData.content}
+            
+            />
                 </div>
+            {isDeadlineOverdue() ? (
+                <div className="text-white py-2 bg-red-500 w-full rounded-md text-center">Work! Deadline is Overdue. </div>
+            ):(
+                <div className="text-white py-2 bg-green-500 w-full rounded-md text-center">Chill! You have time.</div>
+            )}
                 
             </DialogContent>
 

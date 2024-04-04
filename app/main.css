@@ -178,7 +178,7 @@ html , body{
 .hero h1{
     font-family: "Inter", sans-serif;
     text-align: justify;
-    font-size: 4.2vmax;
+    font-size: 3.7vmax;
     font-weight: 400;
 
 }
@@ -621,12 +621,12 @@ grid-row: 1/ 2;
 }
 
 .ver-glass h1{
-    padding: 1vw 2vw;
+    padding: 0vw 2vw;
     font-size: 2vw;
 }
 
 .ver-glass h2{
-    padding: 0.5vw 2vw;
+    padding: 0vw 2vw;
     font-size: 1.5vw;
 }
 
@@ -758,7 +758,7 @@ canvas{
 
     position: relative;
     width: 100%;
-    height: 5vmin;
+    height: auto;
     background-color: rgb(13, 13, 13);
     z-index: 1000;
     display: flex;
@@ -776,4 +776,9 @@ canvas{
 
   
     
+}
+
+.buttoncon p{
+    font-family: "ReloadAlt-Light";
+    font-size: 1vmax;
 }

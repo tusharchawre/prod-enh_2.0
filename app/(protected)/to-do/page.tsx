@@ -31,9 +31,15 @@ const ToDoPage = () => {
 
   if (!lists) {
     return (
-      <>
-        <Item.Skeleton level={0} />
-      </>
+      <div className="m-10 flex flex-wrap gap-10 justify-center flex-row-reverse">
+        <ListItem.Skeleton level={0} />
+        <ListItem.Skeleton level={0} />
+        <ListItem.Skeleton level={0} />
+        <ListItem.Skeleton level={0} />
+        <ListItem.Skeleton level={0} />
+        <ListItem.Skeleton level={0} />
+
+      </div>
     );
   };
 

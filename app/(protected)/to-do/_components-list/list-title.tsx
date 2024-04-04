@@ -88,7 +88,7 @@ const [isEditing, setIsEditing] = useState(false)
                 onClick={enableInput}
                 variant="ghost"
                 size="sm"
-                className="font-normal font-semibold h-auto p-1 mt-2"
+                className=" font-semibold h-auto p-1 mt-2"
                 >
                     <span className="truncate">
                     {initialData.title}
@@ -102,6 +102,6 @@ const [isEditing, setIsEditing] = useState(false)
 
 TitleList.Skeleton = function TitleSkeleton() {
     return(
-        <Skeleton className="h-6 w-20 bg-white/40 rounded-md"/>
+        <Skeleton className="h-64 w-64 bg-white/40 rounded-md"/>
     )
 }

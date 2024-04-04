@@ -15,7 +15,8 @@ return (
     mode="single"
     selected={date}
     onSelect={setDate}
-    className="rounded-md border-none "
+    className="rounded-md border-none shadow "
+
   />
 
     </div>
