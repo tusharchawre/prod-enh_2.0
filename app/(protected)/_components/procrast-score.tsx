@@ -58,7 +58,9 @@ export const ProcrastinationScore = () =>{
 
   
 
-
+    if (number || number2 == 0){
+      setPercentage(0)
+    }
 
 
 
