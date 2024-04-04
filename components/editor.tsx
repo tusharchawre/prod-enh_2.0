@@ -3,11 +3,12 @@
 
 import {
   BlockNoteEditor,
-  PartialBlock
+  PartialBlock,
 } from "@blocknote/core";
 import {
   BlockNoteView,
-  useBlockNote
+  useBlockNote,
+  
 } from "@blocknote/react";
 import "@blocknote/core/style.css";
 
@@ -51,7 +52,7 @@ const Editor = ({
   return (
     <div>
       <BlockNoteView
-
+        
 
         editor={editor}
         theme="dark"

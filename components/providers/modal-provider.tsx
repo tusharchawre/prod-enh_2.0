@@ -1,10 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { Children, useEffect, useState } from "react";
 
 
 import { CoverImageModal } from "@/components/modals/cover-image-modal";
-import { ToDoModal } from "@/components/modals/list-content-modal";
+import { ToDoModal } from "../modals/to-do-modal";
 
 
 export const ModalProvider = () => {
@@ -20,8 +20,9 @@ export const ModalProvider = () => {
   
   return (
     <>
+     
       <CoverImageModal />
-      <ToDoModal />
+
     </>
   );
 };

@@ -9,6 +9,7 @@ import { PlusCircle } from "lucide-react";
 import { toast } from "sonner";
 import { ListItem } from "./_components-list/list-item";
 import { Item } from "../_components/item";
+import { useRouter } from "next/navigation";
 
 
 
@@ -18,6 +19,7 @@ import { Item } from "../_components/item";
 
 const page = () => {
     const user = useCurrentUser()
+    const router = useRouter()
 
     const lists = useQuery(api.lists.getList , {userId : JSON.stringify(useCurrentUser()?.id)})
 
@@ -52,13 +54,18 @@ const page = () => {
     <div className="h-full w-full ">
 
         <div className="m-10 flex flex-wrap gap-10 justify-center flex-row-reverse">
+          
         {lists.map((list) => (
         <div key={list._id}>
+
           <ListItem
             isfinished={list.finished}
             id={list._id}
+            onClick={()=>{}}
             label={list.title}
           />
+          
+
           
         </div>
       ))}

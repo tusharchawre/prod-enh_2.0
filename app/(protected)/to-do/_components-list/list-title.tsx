@@ -81,14 +81,14 @@ const [isEditing, setIsEditing] = useState(false)
                 onChange={onChange}
                 onKeyDown={onKeyDown}
                 value={title}
-                className="h-7 px-2 text-black focus-visible:ring-transparent"
+                className="h-7 px-1 mt-2 text-black text-center focus:ring-transparent "
                 />
             ):(
                 <Button
                 onClick={enableInput}
                 variant="ghost"
                 size="sm"
-                className="font-normal h-auto p-1"
+                className="font-normal font-semibold h-auto p-1 mt-2"
                 >
                     <span className="truncate">
                     {initialData.title}
