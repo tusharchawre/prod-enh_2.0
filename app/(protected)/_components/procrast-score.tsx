@@ -85,7 +85,7 @@ export const ProcrastinationScore = () =>{
       <div className="percentage">{percentage}%</div>
 
     </div>
-    <p className="text w-[40%]">You have completed <span className="text-xl">{number}</span> lists out of <span className="text-xl">{number2}</span> lists.</p>
+    <p className="text w-[40%]">You have completed <span className="text-xl">{number2-number}</span> lists out of <span className="text-xl">{number2}</span> lists.</p>
 
 
     </div>

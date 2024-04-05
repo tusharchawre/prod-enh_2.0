@@ -6,7 +6,7 @@ import { SessionProvider } from "next-auth/react";
 import { auth } from "@/auth";
 
 import { EdgeStoreProvider } from '../lib/edgestore';
-
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 import {Toaster} from "sonner"
 import { ModalProvider } from "@/components/providers/modal-provider";
@@ -31,6 +31,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body>
+      <SpeedInsights/>
         <SessionProvider session={session}>
         <ConvexClientProvider>
         
